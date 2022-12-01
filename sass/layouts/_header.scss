@@ -1,0 +1,119 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+ 
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-div {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: #000000;
+&.header {
+        margin-right: 90px;
+    }
+}
+
+.logo-first {
+  color: var(--accent-color);
+}
+
+.header-nav {
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+
+  & li + li {
+    margin-left: 35px;
+  }
+
+  & a:hover,
+  & a:focus {
+    color: var(--accent-color);
+    fill: var(--accent-color);
+  }
+}
+
+.nav_link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+
+  transition: color var(--timing-function);
+
+  &.primary {
+    position: relative;
+
+    color: var(--accent-color);
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      content: "";
+      width: 100%;
+      height: 4px;
+
+      border-radius: 2px;
+      background-color: var(--accent-color);
+    }
+  }
+}
+
+.header-div .address-list {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.address-header .address-item + .address-item {
+  margin-left: 50px;
+}
+
+.icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.address-link {
+  color: var(--additional-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color var(--timing-function);
+
+  &.header {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.address-item a:hover,
+.address-item a:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
