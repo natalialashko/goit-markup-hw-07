@@ -60,6 +60,19 @@ p {
   padding-bottom: 94px;
 }
 
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.logo-accent {
+  color: var(--accent-color);
+}
+
 .title {
   font-size: 36px;
   line-height: 1.17;
@@ -303,52 +316,37 @@ p {
   transition: opacity 500ms linear, visibility 500ms linear;
 }
 
-.page-header {
+.header {
   border-bottom: 1px solid #ececec;
 }
 
-.header-nav {
-  display: flex;
-}
-
-.header-div {
+.header__container {
   display: flex;
   align-items: center;
 }
 
-.logo-link {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  margin-right: 90px;
   color: #000000;
 }
-.logo-link.header {
-  margin-right: 90px;
-}
 
-.logo-first {
-  color: var(--accent-color);
-}
-
-.header-nav {
-  align-items: center;
-}
-
-.nav-list {
+.menu {
   display: flex;
 }
-.nav-list li + li {
+.menu li + li {
   margin-left: 35px;
 }
-.nav-list a:hover, .nav-list a:focus {
+.menu a:hover, .menu a:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
 
-.nav_link {
+.menu__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -359,11 +357,11 @@ p {
   color: var(--primary-text-color);
   transition: color var(--timing-function);
 }
-.nav_link.primary {
+.menu__link.primary {
   position: relative;
   color: var(--accent-color);
 }
-.nav_link.primary::after {
+.menu__link.primary::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -374,14 +372,18 @@ p {
   background-color: var(--accent-color);
 }
 
-.header-div .address-list {
+.header__address-list {
   display: flex;
   margin-left: auto;
   align-items: center;
 }
 
-.address-header .address-item + .address-item {
-  margin-left: 50px;
+.header__address-item {
+  margin-left: 30px;
+}
+
+.header__address-item:nth-child(1) {
+  margin-left: 0px;
 }
 
 .icon {
@@ -389,19 +391,17 @@ p {
   fill: currentColor;
 }
 
-.address-link {
+.header__address-link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--additional-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   transition: color var(--timing-function);
-}
-.address-link.header {
-  display: flex;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .address-item a:hover,
@@ -410,24 +410,21 @@ p {
   fill: var(--accent-color);
 }
 
-.service-hero {
-  background-color: #2f303a;
-  text-align: center;
-}
-
-.service-hero {
+.hero {
   padding-top: 200px;
   padding-bottom: 200px;
   height: 600px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+  background-color: #2f303a;
+  text-align: center;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img_hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-.service-hero .hero-title {
+.hero .hero-title {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -441,7 +438,7 @@ p {
   text-transform: uppercase;
 }
 
-.btn-service {
+.hero__btn {
   outline: #2f303a;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -458,7 +455,7 @@ p {
   letter-spacing: 0.06em;
   transition: background var(--timing-function), color var(--timing-function);
 }
-.btn-service:hover, .btn-service:focus {
+.hero__btn:hover, .hero__btn:focus {
   background-color: var(--primary-background-color);
   color: var(--accent-color);
 }
@@ -664,48 +661,51 @@ p {
   fill: currentColor;
 }
 
-.section.my-footer {
+.section.footer {
   background: #2f303a;
   padding-bottom: 60px;
   padding-top: 60px;
 }
 
-.my-footer .logo-link {
+.footer__logo {
   color: var(--additional-text-color);
 }
 
-.footer-address {
+.footer__contacts {
   font-style: normal;
 }
 
-.container-footer .logo-link {
+.footer__logo {
   display: inline-block;
   margin-bottom: 20px;
 }
 
-.footer-address .address {
+.footer__address {
   color: var(--additional-text-color);
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 9px;
 }
 
-.address-link.footer-link {
+.footer__address-link {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
 }
 
-.footer .address-item:not(:last-child) {
+.footer__address-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.container-footer {
+.footer__container {
   display: flex;
   gap: 70px;
   align-items: baseline;
 }
 
-.footer-active-title {
+.footer-actions__title {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -715,20 +715,32 @@ p {
   color: #ffffff;
 }
 
-.actions-item-link.footer {
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--additional-text-color);
-  transition: color 500ms var(--timing-function);
+.footer-actions__list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
-.actions-item-link.footer:hover, .actions-item-link.footer:focus {
+
+.footer-actions__item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--additional-text-color);
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
+}
+.footer-actions__item:hover, .footer-actions__item:focus {
   background: var(--accent-color);
+}
+
+.footer-actions__icon {
+  fill: currentColor;
 }
 
 .email-input {
   margin-left: auto;
 }
-.email-input-title {
+.email-input__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -737,13 +749,13 @@ p {
   margin-bottom: 20px;
   color: #ffffff;
 }
-.email-input-form {
+.email-input__form {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
 }
-.email-input-footer {
+.email-input__email {
   min-width: 358px;
   height: 50px;
   background-color: inherit;
@@ -753,7 +765,7 @@ p {
   padding-left: 16px;
 }
 
-.btn-submit-footer {
+.email-input__btn-submit {
   display: flex;
   justify-content: center;
   align-items: center;
