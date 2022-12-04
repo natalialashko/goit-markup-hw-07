@@ -22,8 +22,8 @@
   border-radius: 4px;
   color: #afb1b8;
   fill: #afb1b8;
-  transition: color 500ms var(--timing-function),
-    border 250ms var(--timing-function);
+  transition: color var(--timing-function),
+    border var(--timing-function);
   &:hover {
     border: 1px solid var(--accent-color);
     color: var(--accent-color);

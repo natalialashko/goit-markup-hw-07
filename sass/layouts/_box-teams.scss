@@ -79,8 +79,8 @@
         justify-content: center;
         color: #afb1b8;
 
-        transition: background-color 250ms var(--timing-function),
-            color 250ms var(--timing-function);
+        transition: background-color var(--timing-function),
+            color var(--timing-function);
 
         &:hover,
         &:focus {

@@ -47,6 +47,13 @@ p {
   margin: 0;
 }
 
+body {
+  font-family: "Roboto", sans-serif, system-ui;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+  font-style: normal;
+}
+
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -313,7 +320,7 @@ p {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 500ms linear, visibility 500ms linear;
+  transition: opacity 250ms linear, visibility 250ms linear;
 }
 
 .header {
@@ -424,7 +431,7 @@ p {
   background-repeat: no-repeat;
   background-position: center;
 }
-.hero .hero-title {
+.hero .hero__title {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -616,7 +623,7 @@ p {
   align-items: center;
   justify-content: center;
   color: #afb1b8;
-  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
+  transition: background-color var(--timing-function), color var(--timing-function);
 }
 .actions-item-link:hover, .actions-item-link:focus {
   background-color: var(--accent-color);
@@ -650,7 +657,7 @@ p {
   border-radius: 4px;
   color: #afb1b8;
   fill: #afb1b8;
-  transition: color 500ms var(--timing-function), border 250ms var(--timing-function);
+  transition: color var(--timing-function), border var(--timing-function);
 }
 .company-link:hover {
   border: 1px solid var(--accent-color);
@@ -817,7 +824,7 @@ p {
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
-  transition: color 250ms var(--timing-function), background 250ms var(--timing-function);
+  transition: color var(--timing-function), background var(--timing-function), box-shadow var(--timing-function);
 }
 .portfolio-btn:hover, .portfolio-btn:focus {
   background: var(--accent-color);
@@ -838,7 +845,7 @@ p {
   border-bottom: 1px solid #eeeeee;
   border-top-color: transparent;
   background: var(--primary-background-color);
-  transition: box-shadow 250ms var(--timing-function);
+  transition: box-shadow var(--timing-function), background var(--timing-function), border var(--timing-function);
 }
 .link-portfolio:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
